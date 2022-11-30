@@ -1,0 +1,64 @@
+1. React app install
+npx create-react-app reactapp4 // inside htdocs
+2. html template move to project folder
+3. Folder and component creation
+	a) src/components (Header.js, Footer.js, Slider.js)
+	b) src/pages (Home.js, About.js, Services.js, Blog.js, Contact.js, Frontpage.js)
+	c) RFC for all components
+4. npm install react-router-dom
+5. 
+
+App.js 
+import { Routes, Route } from "react-router-dom";
+************************
+<Routes>
+      <Route path="/" element={<Frontpage />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Route>
+</Routes>
+
+
+Index.js
+import { BrowserRouter } from "react-router-dom";
+*******************************************
+<BrowserRouter>
+    <App />
+ </BrowserRouter>
+
+6. 
+Move all your assets
+public/assets/css
+public/assets/js
+public/assets/images
+public/assets/fornts
+
+Template inside head tag of index.html ->  public/index.html
+Template inside body tag of index.html ->  src/Frontpage.js
+Template inside footer area script of index.html ->  public/index.html  before body
+
+Error correction
+index.html
+	href="css -> href="assets/css
+	href="images -> href="assets/images
+	src="js -> src="assets/js
+Frontpage.js
+	All comments need to add comments
+	All trailing slashes </> (input, br, img)
+	.png">  -> .png"/>
+	style={{fontSize:"red"}}
+	class -> className
+
+
+
+
+
+
+
+
+
+
+
+
+
+
